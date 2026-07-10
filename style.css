@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --color-primary: #1D4ED8;
+  --color-primary-dark: #1d4ed8;
+  --color-dark: #0D1B2A;
+  --color-text: #575757;
+  --color-border: #E5E7EB;
+  --color-bg: #ffffff;
+  --color-white: #ffffff;
+}
+
+Body {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: var(--color-bg);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    max-width: 135px;
+    height: auto;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    transition: color 0.5s ease;
+    color: var(--color-text);
+}
+
+.navbar-links a:hover {
+    color: var(--color-primary);
+}
+
+.navbar-register button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 41px;
+    font-size: 16px;
+    line-height: 1em;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
