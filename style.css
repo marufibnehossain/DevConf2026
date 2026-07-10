@@ -2,12 +2,45 @@
 
 :root {
   --color-primary: #1D4ED8;
-  --color-primary-dark: #1d4ed8;
+  --color-primary-dark: #163faf;
   --color-dark: #0D1B2A;
   --color-text: #575757;
   --color-border: #E5E7EB;
   --color-bg: #ffffff;
   --color-white: #ffffff;
+}
+
+button, .btn {
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 41px;
+    font-size: 16px;
+    line-height: 1em;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--color-text);
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.section-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--color-dark);
+    text-align: center;
+    margin: 0px;
 }
 
 Body {
@@ -66,3 +99,99 @@ Body {
     cursor: pointer;
     transition: background-color 0.5s ease;
 }
+
+.navbar-register button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.hero-section {
+    background-color: var(--color-bg);
+    padding: 100px 0 75px 0;
+    text-align: center;
+    background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), linear-gradient(52deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('./assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-container {
+    max-width: 900px;
+    min-height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-section h1 {
+    font-size: 80px;
+    line-height: 1em;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    color: var(--color-white);
+    font-size: 22px;
+    line-height: 1.1em;
+    margin-bottom: 40px;
+}
+
+.speakers-section {
+    padding: 60px 0;
+}
+
+.speakers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.speaker-card {
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: box-shadow 0.5s ease;
+}
+
+.speaker-card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-card img {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.speaker-card .speaker-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.speaker-card .speaker-info span {
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #2563EB;
+    font-weight: 600;
+}
+
+.speaker-card .speaker-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--color-dark);
+}
+
+.speaker-card .speaker-info p {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
