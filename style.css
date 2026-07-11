@@ -137,11 +137,11 @@ Body {
     margin-bottom: 40px;
 }
 
-.speakers-section {
+.speakers-section, .packages-section {
     padding: 60px 0;
 }
 
-.speakers-container {
+.speakers-container, .packages-container {
     display: flex;
     flex-direction: column;
     gap: 56px;
@@ -165,6 +165,8 @@ Body {
 
 .speaker-card img {
     width: 100%;
+    height: 324px;
+    object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -181,6 +183,7 @@ Body {
     line-height: 1.5em;
     color: #2563EB;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .speaker-card .speaker-info h3 {
@@ -195,3 +198,148 @@ Body {
     line-height: 1.5em;
 }
 
+.section-header p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.package-card {
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: box-shadow 0.5s ease;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.package-card.standard {
+    background-color: var(--color-bg);
+}
+
+.package-card.pro {
+    background-color: var(--color-dark);
+}
+
+.package-card.team {
+    background-color: #F8F9FB;
+}
+
+.package-card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.package-card .package-heading p.package-type {
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: 0.32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888888;
+}
+
+.package-card.pro .package-heading p.package-type {
+    color: #93C5FD !important;
+}
+
+.package-card .package-heading h3 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1em;
+    margin: 5px 0;
+    color: var(--color-dark);
+}
+
+.package-card.pro .package-heading h3{
+    color: var(--color-white) !important;
+}
+
+.package-card .package-heading p {
+    font-size: 13px;
+    line-height: 1.5em;
+    color: var(--color-text);
+}
+
+.package-card.pro .package-heading p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.package-card hr {
+    border: 1px solid var(--color-border);
+    margin: 0;
+}
+
+.package-card.pro hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.package-card ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline-start: 20px;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #333333;
+}
+
+.package-card.pro ul {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.package-card ul li::marker {
+  color: var(--color-primary);
+}
+
+.package-card.pro ul li::marker {
+  color: var(--color-white) !important;
+}
+
+.package-card button {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+.package-card.standard button {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.package-card.standard button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.package-card.pro button {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.package-card.pro button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.package-card.team button {
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+}
+
+.package-card.team button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-color: var(--color-dark);
+}
